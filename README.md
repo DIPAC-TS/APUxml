@@ -1,9 +1,10 @@
+![DIPAC Logo](/images/logo.png)
 # APUxml
 APUxml is a way to standard the Colombian method to calculate APU's in civil projects. And a projected methodology to automate buy and sell process in Construction Companies.
 
 APUxml es una manera de estandarizar el método de cálculo de precios de proyectos civiles en Colombia conocido como Análisis de Precios Unitarios (APU). Y busca proyectarse más allá y ser un estándar para el proceso de compra y venta de compañías en la construcción
 
-##Justificación
+## Justificación
 Después de varios años en la industria, DIPAC SOLUCIONES TÉRMICAS ha notado cómo los procesos de compra y venta son consumidores de tiempo, personal, y papelería que podría ser simplificada con las nuevas tecnologías de Big Data y Machine Learning. Este proceso se hace más evidente en las compañías de construcción. En proyectos civiles y más que todo gubernamentales es usual exigir precios unitarios basados en un análiss de Herramienta, Recurso, Transporte y Mano de Obra conocido como Análisis de Precios Unitarios (APU por su sigla en español). Lo interesante es que pese a ser algo tan común en los proyectos, no existe un reglamento ni forma única de hacerlo, cada entidad gubernamental tiene sus propias reglaas para pedirlos y cada empresa colombiana tiene sus propios formatos para generarlos. Cuando una empresa grande subcontrata cada disciplina que va a trabajar en el proyecto debe consolidar cada formato de sus contratistas a su formato, y si esta le exije el formato de la empresa a su contratista, este debe ajustar cada precio al otro formato. Esto es tiempo y mano de obra desperdiciada, adicional que los formatos suelen venir en Excel y son  200 o 300 hojas de cálculo repietiendo el formato, con archivos pesados que podrían simplificarse fácilmente en una base de datos.
 
 Pensando en este problema, DIPAC SOLUCIONES TÉRMICAS se planteó la siguiente solución: ¿Y si el APU es construido bajo una estructura normalizada para base de datos? Sería como una factura electrónica en donde cada persona puede tener su formato pero a la hora de transferirlo a otra compañía este se acoplaría al formato del otro sin tener que gastar tiempo en traducir formatos y con archivos mucho más ligeros que los actualmente utilizados.
@@ -12,7 +13,7 @@ Para el estado también sería un beneficio ya que estandarizar los APU's permit
 
 Después de trabajar en este formato, DIPAC SOLUCIONES TÉRMICAS se dio cuenta que esta metodología no śolo puede estandarizar el proceso de manejo de APU's sino todos los procesos de compra y venta de las empresas en Colombia. Un proveedor por ejemplo suele enviar sus precios en un archivo PDF o Excel a la empresa y esta tiene que guardar estos precios en sus bases de datos de manera manual, pero, ¿Y si esos precios vinieran en un formato estandarizado? El cliente símplemente cargaría el archivo a su base de datos a través de un programa y los precios ya estarían disponibles para sus cálculos. Esto sería un paso gigante para la administración de compras y ventas, a futuro los precios de los suministros pueden ser descargados desde servidores a sus clientes y automáticamente estar al día actualizando a su vez los precios de los APU's de la empresa.
 
-##APUxml
+## APUxml
 El formato APUxml es una estructura para la presentación de APU's basada en la estructura básica de los APU's en colombia. Utiliza el estándar XML para la transferencia de una base de datos a otra.
 
 DIPAC SOLUCIONES TÉRMICAS es una empresa que tiene un compromiso con la optimización energética en Colombia en todos los sentidos, y el ahorro de tiempo en procesos automatizables es uno de ellos. Dejar esta normativa restringida a unos pocos no es la manera de que se vuelva un estándar en Colombia, por eso este proyecto está abierto a la colaboración de todas las personas interesadas. Pronto estaremos subiendo la estructura base utilizada actualmente por DIPAC y esperamos su apoyo para hacer de este proyecto algo que ayude en gran manera al desarrollo del país.
