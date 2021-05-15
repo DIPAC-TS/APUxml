@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--EN
+    DIPAC THERMAL SOLUTIONS
+    STANDARD SCHEMA TO CONSTRUCTION OF UNITARY PRICE ANALYSIS BASED IN THE APU COLOMBIAN FORMAT
+    DEVELOPED BY: MENG. EFRAIN ALONSO PUERTO CASTELLANOS
+-->
+<!--SP
+    DIPAC SOLUCIONES TÉRMICAS
+    ESQUEMA ESTÁNDAR PARA LA CONSTRUCCIÓN DE ANÁLISIS DE PRECIOS UNITARIOS BASADOS EN EL FORMATO APU COLOMBIAN
+	DESARROLLADO POR: M. en I. EFRAIN ALONSO PUERTO CASTELLANOS
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.01">
+<xs:annotation>
+	<xs:documentation>apuXML version 0.01 - maintained by http://www.dipac.com.co</xs:documentation>
+</xs:annotation>
+<xs:element name="APUxml">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="APU" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="APUType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="BudgetFamily" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="BudgetType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Building" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Project" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Resource" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ResourceType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Tool" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ToolType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Transport" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="TransportType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Workshop" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="WorkshopType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="generated" type="xs:dateTime"/>
+		</xs:complexType>
+</xs:element>
+<xs:element name="APU">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeAPU" type="xs:string"/>
+      <xs:element name="codeAPUType" type="xs:string"/>
+      <xs:element name="codeBuilding" type="xs:integer"/>
+      <xs:element name="qntyAPU" type="xs:decimal"/>
+	  <xs:element name="voluAPU" type="xs:decimal"/>
+	  <xs:element name="wgthAPU" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="APUType">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeAPUType" type="xs:string"/>
+      <xs:element name="codeBudgetType" type="xs:string"/>
+	  <xs:element name="nameAPU" type="xs:string"/>
+	  <xs:element name="unitAPU" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="BudgetFamily">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeBudgetFamily" type="xs:integer"/>
+      <xs:element name="nameBudgetFamily" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="BudgetType">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeBudgetType" type="xs:integer"/>
+	  <xs:element name="codeBudgetFamily" type="xs:integer"/>
+      <xs:element name="nameBudgetFamily" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="Building">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeBuilding" type="xs:integer"/>
+	  <xs:element name="nameBuilding" type="xs:string"/>
+	  <xs:element name="codeProject" type="xs:string"/>
+      <xs:element name="trnsBuilding" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="Project">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeProject" type="xs:string"/>
+	  <xs:element name="nameProject" type="xs:string"/>
+	  <xs:element name="dateProject" type="xs:date"/>
+      <xs:element name="contProject" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="Resource">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeResource" type="xs:integer"/>
+	  <xs:element name="codeAPU" type="xs:string"/>
+	  <xs:element name="codeResourceType" type="xs:string"/>
+      <xs:element name="qntyResource" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="ResourceType">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeResourceType" type="xs:string"/>
+	  <xs:element name="nameResourceType" type="xs:string"/>
+	  <xs:element name="unitResourceType" type="xs:string"/>
+      <xs:element name="pricResource" type="xs:decimal"/>
+	  <xs:element name="taxxResource" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="Tool">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeTool" type="xs:integer"/>
+	  <xs:element name="codeAPU" type="xs:string"/>
+	  <xs:element name="codeToolType" type="xs:string"/>
+      <xs:element name="qntyTool" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="ToolType">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeToolType" type="xs:string"/>
+	  <xs:element name="nameToolType" type="xs:string"/>
+	  <xs:element name="rateTool" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="Transport">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeTransport" type="xs:integer"/>
+	  <xs:element name="codeAPU" type="xs:string"/>
+	  <xs:element name="codeTransportType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="TransportType">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeTransportType" type="xs:string"/>
+	  <xs:element name="nameTransport" type="xs:string"/>
+	  <xs:element name="distTransport" type="xs:decimal"/>
+	  <xs:element name="rateTransport" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="Workshop">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeWorkshop" type="xs:integer"/>
+	  <xs:element name="codeAPU" type="xs:string"/>
+	  <xs:element name="codeWorkshopType" type="xs:string"/>
+	  <xs:element name="jourWorkshop" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+<xs:element name="WorkshopType">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="codeWorkshopType" type="xs:string"/>
+	  <xs:element name="nameWorkshopType" type="xs:string"/>
+	  <xs:element name="wageWorkshop" type="xs:decimal"/>
+	  <xs:element name="expnWorkshop" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>
